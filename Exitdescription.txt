@@ -1,0 +1,4 @@
+Another blank room with three doors in it. 
+One is kitchen, another is offices, and the last one says "exit"
+It has two panels next to it: one is asking for a six digit password, another - for a keycard.
+Looks like you need to enter the code and swipe the card in one go, or it will reset.
