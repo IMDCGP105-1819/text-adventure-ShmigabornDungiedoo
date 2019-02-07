@@ -218,23 +218,26 @@ def player_move(myAction):
 def player_examine(action):
     print(zonemap[myPlayer.location][EXAMINATION])
     if zonemap[myPlayer.location][ZONENAME]== 'Master Bedroom' :
-        print("What do you check?\n")
-        q=input("> ")
-        if q == 'closet':
-            print("Just some old clothes.\n")
-        elif q== 'bed':
-            print("You have found a small green key, which you keep, and a keycard.\n")
-            print("You use the keycard on the device and the door opens.\n")
-            myPlayer.inventory.append("greenKey")
-            zonemap[myPlayer.location][SOLVED]=True
+        while zonemap[myPlayer.location][SOLVED]!= True:
+            print("What do you check?\n")
+            q=input("> ")
+            if q == 'closet':
+                print("Just some old clothes.\n")
+            elif q== 'bed':
+                print("You have found a small green key, which you keep, and a keycard.\n")
+                print("You use the keycard on the device and the door opens.\n")
+                myPlayer.inventory.append("greenKey")
+                zonemap[myPlayer.location][SOLVED]=True
     elif zonemap[myPlayer.location][ZONENAME] =='Kitchen':
-        print("There are a few knives nearby. What do you do?\n")
-        q=input("> ")
-        if q in ["take knife", "use knife"]:
-            print("You take the knife and tear the key off the wall. The door opens.\n")
-            myPlayer.inventory.append("redKey")
-        else:
-            print("Invalid input.")
+        while zonemap[myPlayer.location][SOLVED]!= True:
+            print("There are a few knives nearby. What do you do?\n")
+            q=input("> ")
+            if q in ["take knife", "use knife"]:
+                print("You take the knife and tear the key off the wall. The door opens.\n")
+                myPlayer.inventory.append("redKey")
+                zonemap[myPlayer.location][SOLVED]=True
+            else:
+                print("Invalid input.")
     #elif zonemap[myPlayer.location] ==b3:
         #print()
     #elif zonemap[myPlayer.location] ==c2:
