@@ -276,18 +276,18 @@ def player_examine(action): #stores all the riddles for the rooms. Activated aft
         else:
             print("You dont have all the keys yet. Go explore some more.")
 
-        #print()
 
 
 
-def movement_func(destination):
+
+def movement_func(destination): #confirms that the player has moved to a different room
     print("\n" + "You have moved to the " + destination + ".")
     myPlayer.location = destination
     print_location()
 
 #Game Functionality
 
-def endgame():
+def endgame():# outputs the ending sequence
     end1=("You put the keys in one after another. When you turn the last key the door clicks and opens. The sun is shining and a blow of fresh air washes over you. You are free.")
     for c in end1:
         sys.stdout.write(c)
@@ -295,12 +295,12 @@ def endgame():
         time.sleep(0.05)
         input("Press any key to quit.")
 
-def game_loop():
+def game_loop():#loops the game
     while myPlayer.gameOver == False:
         prompt()
     endgame()
 
-def game_setup():
+def game_setup():#clears the command line and starts the game
     os.system("cls")
     q1="What is your name?\n"
     for c in q1:
