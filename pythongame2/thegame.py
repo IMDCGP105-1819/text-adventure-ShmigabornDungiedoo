@@ -319,7 +319,7 @@ def game_setup():#clears the command line and starts the game
         sys.stdout.flush()
         time.sleep(0.03)
     for c in s2:
-        sys.stdout.write(c)
+        sys.stdout.write(c)    #these are used to make the text appear letter by letter
         sys.stdout.flush()
         time.sleep(0.03)
     for c in s3:
@@ -331,5 +331,5 @@ def game_setup():#clears the command line and starts the game
         sys.stdout.flush()
         time.sleep(0.03)
     game_loop()
-
+#sarts the game
 title_screen()
